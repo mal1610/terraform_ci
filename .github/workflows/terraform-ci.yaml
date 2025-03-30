@@ -49,7 +49,7 @@ jobs:
         with:
           framework: terraform
         env:
-          SKIP_CHECK: "CKV2_AWS_62, CKV_AWS_21, CKV_AWS_145, CKV2_AWS_6, CKV_AWS_144, CKV_AWS_18, CKV2_AWS_61"
+          SKIP_CHECK: "CKV2_AWS_62,CKV_AWS_21,CKV_AWS_145,CKV2_AWS_6,CKV_AWS_144,CKV_AWS_18,CKV2_AWS_61"
 
       - name: Terraform Plan
         run: terraform plan
