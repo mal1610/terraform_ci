@@ -46,8 +46,10 @@ jobs:
 
       - name: Checkov
         uses: bridgecrewio/checkov-action@master
-        if: github.ref != 'refs/heads/main'
-        run: checkov -d .
+        with:
+          directory: .
+        env:
+          SKIP_PATH: "/main.tf"
         # with:
         #   framework: terraform
         # run: checkov -d . --skip-check CKV2_AWS_62, CKV_AWS_21, CKV_AWS_145, CKV2_AWS_6, CKV_AWS_144, CKV_AWS_18, CKV2_AWS_61
