@@ -1,3 +1,14 @@
+terraform {
+  required_version = ">= 1.0.0"
+  # This is the required provider block for Terraform 0.13 and later
+ required_providers {
+   aws = {
+     source  = "hashicorp/aws"
+     version = "5.93.0"
+   }
+ }
+}
+
 provider "aws" {
   region = "ap-southeast-1"
 }
